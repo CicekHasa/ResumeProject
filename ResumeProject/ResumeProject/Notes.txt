@@ -1,0 +1,19 @@
+﻿-git branch branch_name: Yeni branch oluşturur.
+- git checkout branche_name: Hedeflenen branch'e geçiş yapar.
+- Bir cshtml dosyasında background-image de parantez içinde url verilirse url'in başında tilda(~) olmaz!
+	.Örnek:style="background-image: url(~/Content/sidebar-01/images/logo.jpg)
+-ORM(Object Relational Mapping): Veritabanındaki tablolar ile yazılım uygulamasındaki sınıflar arasında bir köprü görevi görür.
+	-ORM araçları, SQL sorguları yapmadan nesneler ve sınıflar aracılığıyla veritabanı işlemleri yapmamızı sağlar.
+-Entity Framework(EF): ORM aracıdır. .Net tabanı uygulamalarda veri iletişimi hızlandırmak ve basitleştirmek için kullanılır.
+	-EF, çeşitli gliştirme yaklaşımlarını destekler. Bunlardan bazıları:
+		-Code First:Veritabanı şeması C# kodu ile tanımlanan sınıflar aracılığı ile oluşturulur. Bu yaklaşımda sınıflar tabloları, propertyler de sütunları temsil eder.
+		-Db first: Varolan bir veritabanından yola çıkılarak, EF, bu veritabanı şemasını temel alarak entity sınıflarını oluşturur. Veritabanı önceden oluşturulur. Bu yaklaşımda Tablolar sınıflara, sütunlar property lere dönüştürülür.
+-Ef de kendine özgü metotlar vardır Bunlar:
+	-ToList, Add, Update, Remove, Find...
+-DbFirst yaklaşımı ile projeyi oluşturma adımları
+	1.Model Oluştur.
+	2.Modeli İncele.
+	3.Controller 
+	4.View
+
+-a connection was successfully established with the server but then an error during login process HATASI: Model klasöründe db ye bağlanırken bu hatayı verdi. Çözüm için db name'i yapıştırdıktan sonra Encrypt seçeneğindeki "Mandatory" yerine "Optinal" alanını seçmeniz gerek!
