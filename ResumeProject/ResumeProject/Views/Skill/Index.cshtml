@@ -1,8 +1,31 @@
-﻿
+﻿@* Asp.Net MVC ve Core da tabloları listelemek için view de hangi tabloyu listeleyeceksek bir model oluşturmak gerekiyor.
+    Tablodaki birden fazla kayıdı listelemek için o model'i list içinde oluşturmak gerek!
+*@
+@model  List<ResumeProject.Models.TblSkill>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Yetenek Listesi</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Yetenek Başlığı</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.SkillID</td>
+            <td>@item.SkillTitle</td>
+            @* href: skill controller içindeki deleteSkill action'ına id ile git.' *@
+            <td><a href="/Skill/DeleteSkill/@item.SkillID" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="/Skill/UpdateSkill/@item.SkillID" class="btn btn-outline-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<a href="/Skill/AddSkill" class="btn btn-outline-primary">Yeni Yetenek Girişi</a>
 

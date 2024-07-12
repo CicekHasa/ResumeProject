@@ -29,5 +29,6 @@ namespace ResumeProject.Models
         public virtual DbSet<TblProject> TblProject { get; set; }
         public virtual DbSet<TblSkill> TblSkill { get; set; }
         public virtual DbSet<TblTechnology> TblTechnology { get; set; }
+        public virtual DbSet<TblContact> TblContact { get; set; }
     }
 }
