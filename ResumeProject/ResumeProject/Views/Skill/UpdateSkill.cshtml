@@ -8,16 +8,16 @@
 
 <form method="post">
     <label>Yetenek ID</label>
-    @Html.TextBoxFor(x=>x.SkillID, new{@class="form-control"})
+    @Html.TextBoxFor(x => x.SkillID, new { @class = "form-control", @readonly = "readonly" })
     <br />
     <label>Yetenek Başlığı</label>
-    @Html.TextBoxFor(x=>x.SkillTitle, new {@class="form-control"})
+    @Html.TextBoxFor(x => x.SkillTitle, new { @class = "form-control" })
     <br />
     <label>Yetenek İkonu</label>
-    @Html.TextBoxFor(x=>x.SkillIcon, new {@class="form-control"})
+    @Html.TextBoxFor(x => x.SkillIcon, new { @class = "form-control" })
     <br />
     <label>Yetenek Açıklaması</label>
-    @Html.TextBoxFor(x=>x.SkillDescription, new {@class="form-control"})
+    @Html.TextBoxFor(x => x.SkillDescription, new { @class = "form-control" })
     <br />
     <button class="btn btn-primary">Verileri Güncelle</button>
 </form>

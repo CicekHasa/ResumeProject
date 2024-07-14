@@ -33,3 +33,6 @@ Genelde köşeli parantez ile ifade edilir.
 -[HttpPost]//Bir view içinde herhangi bir butona tıklandığında bu attribute'ün altındaki method çalışır.
 -RedirectToAction("action_name"): Aynı controller içinde farklı bir action methoduna gitmek için kullanılan bir methoddur.
 - @Html.TextBoxFor(x=>x.SkillID, new{@class="form-control"}): Verileri çekerken html helper'ın textboxfor özelliği kullanılır. form-control da textbox'ın düzgün gözükmesi için bu şekilde kullanılıyor.
+-Tabloya verileri kaydetme işleminde input textlerde eğer name yazılmazsa boş bir kayıt oluşur. Yazılan değer sütunda gözükmez!!!
+-@Html.TextBoxFor(x => x.SkillID, new {@readonly = "readonly" }): readonly özelliği textbox da veri gözüksü ancak set edilememesi için kullanılır.
+-Yukarıda readonly özelliği yerine Id hiç getirmeden ancak arka planda da kullanmak için html helperlarından "HiddenFor" özelliğini de kulalnabiliriz.

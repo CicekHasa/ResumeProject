@@ -10,6 +10,9 @@
         <EntityTypeShape EntityType="DbResumeModel.TblSkill" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DbResumeModel.TblTechnology" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DbResumeModel.TblContact" Width="1.5" PointX="5.375" PointY="3.75" />
+        <EntityTypeShape EntityType="DbResumeModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="DbResumeModel.TblCategory" Width="1.5" PointX="3.5" PointY="7.125" />
+        <AssociationConnector Association="DbResumeModel.FK_TblContact_TblCategory" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
