@@ -36,3 +36,4 @@ Genelde köşeli parantez ile ifade edilir.
 -Tabloya verileri kaydetme işleminde input textlerde eğer name yazılmazsa boş bir kayıt oluşur. Yazılan değer sütunda gözükmez!!!
 -@Html.TextBoxFor(x => x.SkillID, new {@readonly = "readonly" }): readonly özelliği textbox da veri gözüksü ancak set edilememesi için kullanılır.
 -Yukarıda readonly özelliği yerine Id hiç getirmeden ancak arka planda da kullanmak için html helperlarından "HiddenFor" özelliğini de kulalnabiliriz.
+-Bir view içinde form oluşturuyorsan ve method kısmı post değil ise o view'e ait controllerdaki httpost durumundaki method çalışmaz!!!
