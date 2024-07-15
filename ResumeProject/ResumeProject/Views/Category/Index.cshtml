@@ -13,6 +13,7 @@
         <td>Kategori Adı</td>
         <td>Sil</td>
         <td>Güncelle</td>
+        <td>Mesaj Türü</td>
     </tr>
     @foreach (var item in Model)
     {
@@ -21,6 +22,7 @@
             <td>@item.CategoryName</td>
             <td><a href="/Category/DeleteCategory/@item.CategoryID" class="btn btn-outline-danger">Sil</a></td>
             <td><a href="/Category/UpdateCategory/@item.CategoryID" class="btn btn-outline-primary">Güncelle</a></td>
+            <td><a href="/Category/GetMessageBySubject/@item.CategoryID" class="btn btn-outline-dark">Mesaj Türü</a></td>
         </tr>
     }
 </table>

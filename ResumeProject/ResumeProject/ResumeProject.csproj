@@ -375,6 +375,9 @@
     <Content Include="Views\Profile\AddSkill.cshtml" />
     <Content Include="Views\Profile\AddProfile.cshtml" />
     <Content Include="Views\Profile\UpdateProfile.cshtml" />
+    <Content Include="Views\Category\GetMessageBySubject.cshtml" />
+    <Content Include="Views\Category\ViewTheMessage.cshtml" />
+    <Content Include="Views\Contact\ViewTheMessage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,27 @@
+﻿@model List<ResumeProject.Models.TblContact>
+@{
+    ViewBag.Title = "GetMessageBySubject";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Konuya Göre Gelen Mesajlar</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <td>#</td>
+        <td>Ad Soyad</td>
+        <td>Konu</td>
+        <td>Tarih</td>
+        <td>Mesajı Aç</td>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ContactID</td>
+            <td>@item.NameSurname</td>
+            <td>@item.TblCategory.CategoryName</td>
+            <td>@item.Date</td>
+            <td><a href="/Category/ViewTheMessage/@item.ContactID" class="btn btn-success">Mesajı Aç</a></td>
+        </tr>
+    }
+</table>

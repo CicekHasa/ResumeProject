@@ -1,0 +1,24 @@
+﻿@model ResumeProject.Models.TblContact
+@{
+    ViewBag.Title = "ViewTheMessage";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Mesaj Görüntüleme Sayfası</h2>
+
+<form method="post"> 
+    <label>Ad Soyad</label>
+    <input type="text" class="form-control" readonly="readonly" value="@Model.NameSurname" />
+    <br />
+    <label>Mail</label>
+    <input type="text" class="form-control" readonly="readonly" value="@Model.Mail" />
+    <br />
+    <label>Konu</label>
+    <input type="text" class="form-control"  readonly="readonly" value="@Model.TblCategory.CategoryName"/>
+    <br />
+    <label>Mesaj</label>
+    <input type="text" class="form-control" readonly="readonly" value="@Model.Message" />
+    <br />
+    <label>Tarih</label>
+    <input type="text" class="form-control" readonly="readonly" value="@Model.Date" />
+</form>

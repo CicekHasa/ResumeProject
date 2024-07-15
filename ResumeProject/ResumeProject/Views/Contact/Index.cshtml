@@ -14,7 +14,6 @@
         <th>Konu</th>
         <th>Tarih</th>
         <th>Sil</th>
-        <th>Güncelle</th>
         <th>Mesajı Aç</th>
     </tr>
     @foreach (var item in Model)
@@ -24,11 +23,8 @@
             <td>@item.NameSurname</td>
             <td>@item.TblCategory.CategoryName</td>@*Bu tblcategory tablosu ile ilişkili olduğunda o tablodaki veriyi şimdi çağırıyorum.*@
             <td>@item.Date</td>
-            <td><a href="#"class="btn btn-outline-danger">Sil</a></td>
-            <td><a href="#"class="btn btn-outline-primary">Güncelle</a></td>
-            <td><a href="#"class="btn btn-outline-secondary">Mesajı Aç</a></td>
+            <td><a href="/Contact/DeleteContact/@item.ContactID"class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="/Contact/ViewTheMessage/@item.ContactID"class="btn btn-outline-secondary">Mesajı Aç</a></td>
         </tr>
     }
 </table>
-<a href="#" class="btn btn-success">Yeni İletişim Bilgisi Ekle</a>
-
