@@ -37,3 +37,11 @@ Genelde köşeli parantez ile ifade edilir.
 -@Html.TextBoxFor(x => x.SkillID, new {@readonly = "readonly" }): readonly özelliği textbox da veri gözüksü ancak set edilememesi için kullanılır.
 -Yukarıda readonly özelliği yerine Id hiç getirmeden ancak arka planda da kullanmak için html helperlarından "HiddenFor" özelliğini de kulalnabiliriz.
 -Bir view içinde form oluşturuyorsan ve method kısmı post değil ise o view'e ait controllerdaki httpost durumundaki method çalışmaz!!!
+-VivewBag: Controller dan View kısmına veri taşımak için kullanılan bir komuttur.
+-Count(): EF'in bir methodudur. Tablodaki kayıt sayısını verir.
+-Where(): EF'in bir methodudur. Tablodaki veri için koşul koymamıza yarar.
+-Select(): EF'in bir methodudur. Tablodaki seçmek istediğimiz sütunu belirtmek için kullanırız.
+-FirstOrDefault(): EF'in bir methodudur. Tek bir kayıt veya veri değeri dönen sorguda listelemek için kullanılır. Bunun yerine ToList() de kullanılabilir.
+-Sum(): EF'in bir methodudur. Tablodaki seçilen sütundaki toplam değeri döndürür.
+-Average(): EF'in bir methodudur. Tablodaki seçilen sütunun ortalama değerini döndürür.
+-Max(): EF'in bir methodudur. Seçilen sütundaki en büyük değeri döndürür.
