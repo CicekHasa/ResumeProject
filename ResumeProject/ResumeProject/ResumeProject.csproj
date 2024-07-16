@@ -210,8 +210,6 @@
     <Content Include="Content\sidebar-01\js\popper.js" />
     <Content Include="Content\starter\starter\about.html" />
     <Content Include="Content\starter\starter\assets\css\style-liberty.css" />
-    <Content Include="Content\starter\starter\assets\images\about-me.jpg" />
-    <Content Include="Content\starter\starter\assets\images\about-me.png" />
     <Content Include="Content\starter\starter\assets\images\about.jpg" />
     <Content Include="Content\starter\starter\assets\images\about1.jpg" />
     <Content Include="Content\starter\starter\assets\images\b1.jpg" />
@@ -220,7 +218,6 @@
     <Content Include="Content\starter\starter\assets\images\b4.jpg" />
     <Content Include="Content\starter\starter\assets\images\b5.jpg" />
     <Content Include="Content\starter\starter\assets\images\b6.jpg" />
-    <Content Include="Content\starter\starter\assets\images\banner-me.png" />
     <Content Include="Content\starter\starter\assets\images\banner.jpg" />
     <Content Include="Content\starter\starter\assets\images\banner.png" />
     <Content Include="Content\starter\starter\assets\images\banner1.jpg" />
