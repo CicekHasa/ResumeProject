@@ -34,6 +34,7 @@ namespace ResumeProject.Models
         public virtual DbSet<TblContact> TblContact { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<TblCategory> TblCategory { get; set; }
+        public virtual DbSet<TblService> TblService { get; set; }
     
         public virtual ObjectResult<Nullable<int>> CountProjeTalebi()
         {

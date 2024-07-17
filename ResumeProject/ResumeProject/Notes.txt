@@ -45,3 +45,9 @@ Genelde köşeli parantez ile ifade edilir.
 -Sum(): EF'in bir methodudur. Tablodaki seçilen sütundaki toplam değeri döndürür.
 -Average(): EF'in bir methodudur. Tablodaki seçilen sütunun ortalama değerini döndürür.
 -Max(): EF'in bir methodudur. Seçilen sütundaki en büyük değeri döndürür.
+-Partial: Sitede değişen content alanının içindekileri ayrı ayrı bölmeye yarar. Bu da hata çözümünü ve proje yönetimini kolaylaştırır. Controller kısmında "PartialViewResult" action'ı oluşturarak content alanını bölebiliriz.
+-Controller da action olarak oluşturulan partial dan bir view oluşturuken "create new partial" seçeneği işaretlenmeli!
+-Action(): Html'in helperlarında kullanılan bir methoddur. View kısmında oluşturulan partial'ı çağırmak için kullanılır.
+-href="#portfolio" : href özelliğinde başına "#" sembolü o sayfada alt satıra geçmeye yarar.
+-Math.Round(): Bu method küsüratlı bir değeri tam sayıya çevirip döndürür.
+-GetValueOrDefault() Bu method bir değer nullable(null izin vermiyorsa!) ise o değer null gelme durumunda default 0 gelmesi için bu method kullanılmalı.

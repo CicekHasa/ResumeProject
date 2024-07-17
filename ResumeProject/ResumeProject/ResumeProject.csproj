@@ -170,6 +170,9 @@
     <Compile Include="Models\TblProject.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\TblService.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\TblSkill.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -449,6 +452,18 @@
     <Content Include="Views\Contact\ViewTheMessage.cshtml" />
     <Content Include="Views\Statistic\Index.cshtml" />
     <Content Include="Views\Default\Index.cshtml" />
+    <Content Include="Views\Default\Partial1.cshtml" />
+    <Content Include="Views\Default\PartialHeader.cshtml" />
+    <Content Include="Views\Default\PartialNavbar.cshtml" />
+    <Content Include="Views\Default\PartialFeature.cshtml" />
+    <Content Include="Views\Default\PartialAbout.cshtml" />
+    <Content Include="Views\Default\PartialService.cshtml" />
+    <Content Include="Views\Default\PartialTechnology.cshtml" />
+    <Content Include="Views\Default\PartialCounter.cshtml" />
+    <Content Include="Views\Default\PartialProjects.cshtml" />
+    <Content Include="Views\Default\PartialBrands.cshtml" />
+    <Content Include="Views\Default\PartialFooter.cshtml" />
+    <Content Include="Views\Default\PartialScript.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
