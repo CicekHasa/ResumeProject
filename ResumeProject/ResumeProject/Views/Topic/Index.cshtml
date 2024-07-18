@@ -1,0 +1,33 @@
+﻿@using ResumeProject.Models
+@model List<TblTopic>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Konu Listeleme Sayfası</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Konu Başlığı</th>
+        <th>Konu Açıklaması</th>
+        <th>Konu Icon</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.topicID</td>
+            <td>@item.topictitle</td>
+            <td>@item.topicDescription</td>
+            <td>@item.topicIcon</td>
+            <td><a href="/Topic/DeleteTopic/@item.topicID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Topic/UpdateTopic/@item.topicID" class="btn btn-primary">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<a href="/Topic/AddTopic/" class="btn btn-success">Yeni Konu Ekle</a>
+

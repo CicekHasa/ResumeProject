@@ -1,0 +1,21 @@
+﻿@model ResumeProject.Models.TblTopic
+@{
+    ViewBag.Title = "UpdateTopic";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Konu Güncelleme Sayfası</h2>
+<form method="post">
+    @Html.HiddenFor(x=>x.topicID)
+    <label>Konu Başlığı</label>
+    @Html.TextBoxFor(x=>x.topictitle, new {@class="form-control"})
+    <br />
+    <label>Konu Açıklaması</label>
+    @Html.TextBoxFor(x=>x.topicDescription, new {@class="form-control"})
+    <br />
+    <label>Konu İkonu</label>
+    @Html.TextBoxFor(x=>x.topicIcon, new {@class="form-control"})
+    <br />
+    <button class="btn btn-success">Güncelle</button>
+</form>
+

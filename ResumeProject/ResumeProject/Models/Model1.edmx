@@ -84,6 +84,15 @@
           <Property Name="TechnologyTitle" Type="nvarchar" MaxLength="50" />
           <Property Name="TechnologyValue" Type="int" />
         </EntityType>
+        <EntityType Name="TblTopic">
+          <Key>
+            <PropertyRef Name="topicID" />
+          </Key>
+          <Property Name="topicID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="topictitle" Type="nvarchar" MaxLength="50" />
+          <Property Name="topicDescription" Type="nvarchar" MaxLength="100" />
+          <Property Name="topicIcon" Type="nvarchar" MaxLength="50" />
+        </EntityType>
         <Association Name="FK_TblContact_TblCategory">
           <End Role="TblCategory" Type="Self.TblCategory" Multiplicity="0..1" />
           <End Role="TblContact" Type="Self.TblContact" Multiplicity="*" />
@@ -106,6 +115,7 @@
           <EntitySet Name="TblService" EntityType="Self.TblService" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblSkill" EntityType="Self.TblSkill" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblTechnology" EntityType="Self.TblTechnology" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblTopic" EntityType="Self.TblTopic" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_TblContact_TblCategory" Association="Self.FK_TblContact_TblCategory">
             <End Role="TblCategory" EntitySet="TblCategory" />
             <End Role="TblContact" EntitySet="TblContact" />
@@ -171,6 +181,7 @@
           </AssociationSet>
           <FunctionImport Name="CountProjeTalebi" ReturnType="Collection(Int32)" />
           <EntitySet Name="TblService" EntityType="DbResumeModel.TblService" />
+          <EntitySet Name="TblTopic" EntityType="DbResumeModel.TblTopic" />
         </EntityContainer>
         <EntityType Name="TblContact">
           <Key>
@@ -222,6 +233,15 @@
           <Property Name="ServiceTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="ServiceIcon" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="ServiceDescription" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TblTopic">
+          <Key>
+            <PropertyRef Name="topicID" />
+          </Key>
+          <Property Name="topicID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="topictitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="topicDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="topicIcon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -314,6 +334,16 @@
                 <ScalarProperty Name="ServiceIcon" ColumnName="ServiceIcon" />
                 <ScalarProperty Name="ServiceTitle" ColumnName="ServiceTitle" />
                 <ScalarProperty Name="ServiceID" ColumnName="ServiceID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblTopic">
+            <EntityTypeMapping TypeName="DbResumeModel.TblTopic">
+              <MappingFragment StoreEntitySet="TblTopic">
+                <ScalarProperty Name="topicIcon" ColumnName="topicIcon" />
+                <ScalarProperty Name="topicDescription" ColumnName="topicDescription" />
+                <ScalarProperty Name="topictitle" ColumnName="topictitle" />
+                <ScalarProperty Name="topicID" ColumnName="topicID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

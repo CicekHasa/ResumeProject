@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "AddTopic";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Konu Ekleme Sayfası</h2>
+
+<form method="post">
+    <label>Konu Başlığı</label>
+    <input  type="text" class="form-control" name="topictitle"/>
+    <br />
+    <label>Konu Açıklaması</label>
+    <input  type="text" class="form-control" name="topicDescription"/>
+    <br />
+    <label>Konu İkonu</label>
+    <input type="text" class="form-control" name="topicIcon" />
+    <br />
+    <button class="btn btn-success">Kaydet</button>
+</form>

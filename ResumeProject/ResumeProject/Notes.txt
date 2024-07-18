@@ -51,3 +51,4 @@ Genelde köşeli parantez ile ifade edilir.
 -href="#portfolio" : href özelliğinde başına "#" sembolü o sayfada alt satıra geçmeye yarar.
 -Math.Round(): Bu method küsüratlı bir değeri tam sayıya çevirip döndürür.
 -GetValueOrDefault() Bu method bir değer nullable(null izin vermiyorsa!) ise o değer null gelme durumunda default 0 gelmesi için bu method kullanılmalı.
+-Url.Content(): bu method bir image'e ~(tilda) ile yol verdiğimiz gibi aynı şekilde image lere yol vermemizi sağlar.

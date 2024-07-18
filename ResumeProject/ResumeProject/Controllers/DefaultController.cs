@@ -10,6 +10,11 @@ namespace ResumeProject.Controllers
     {
         DbResumeEntities db=new DbResumeEntities();
 
+        public PartialViewResult PartialTopic()
+        {
+            var values=db.TblTopic.ToList();
+            return PartialView(values);
+        }
         public PartialViewResult PartialScript()
         {
             return PartialView();
@@ -27,7 +32,8 @@ namespace ResumeProject.Controllers
 
         public PartialViewResult PartialProjects()
         {
-            return PartialView();
+            var values=db.TblProject.ToList();
+            return PartialView(values);
         }
 
         public PartialViewResult PartialCounter()
