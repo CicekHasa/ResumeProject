@@ -131,6 +131,7 @@
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\FooterController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\ProjectController.cs" />
@@ -159,10 +160,16 @@
     <Compile Include="Models\sysdiagrams.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\TblBrands.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\TblCategory.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TblContact.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Tblfooter.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TblProfile.cs">
@@ -472,6 +479,10 @@
     <Content Include="Views\Topic\AddTopic.cshtml" />
     <Content Include="Views\Topic\UpdateTopic.cshtml" />
     <Content Include="Views\Default\PartialTopic.cshtml" />
+    <Content Include="Views\Footer\Index.cshtml" />
+    <Content Include="Views\Footer\Index1.cshtml" />
+    <Content Include="Views\Footer\AddFooterInfo.cshtml" />
+    <Content Include="Views\Footer\UpdateFooterInfo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

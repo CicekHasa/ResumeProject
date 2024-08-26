@@ -22,12 +22,14 @@ namespace ResumeProject.Controllers
 
         public PartialViewResult PartialFooter()
         {
-            return PartialView();
+            var values= db.Tblfooter.OrderByDescending(f => f.FooterID).FirstOrDefault();
+            return PartialView(values);
         }
 
         public PartialViewResult PartialBrands()
         {
-            return PartialView();
+            var values = db.TblBrands.ToList();
+            return PartialView(values);
         }
 
         public PartialViewResult PartialProjects()

@@ -1,0 +1,35 @@
+﻿@using ResumeProject.Models
+@model List<Tblfooter>
+@{
+    ViewBag.Title = "Index1";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Footer List Page</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Footer Phone</th>
+        <th>Footer Mail</th>
+        <th>Footer Adress</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.FooterID</td>
+            <td>@item.FooterTel</td>
+            <td>@item.FooterMail</td>
+            <td>@item.FooterAdress</td>
+            <td><a href="/Footer/DeleteFooterInfo/@item.FooterID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Footer/UpdateFooterInfo/@item.FooterID" class="btn btn-success">Güncelle</a></td>
+        </tr>
+    }
+
+
+</table>
+<a href="/Footer/AddFooterInfo" class="btn btn-primary">Yeni Bilgi Ekle</a>
+

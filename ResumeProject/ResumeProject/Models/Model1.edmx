@@ -15,6 +15,13 @@
           <Property Name="version" Type="int" />
           <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
+        <EntityType Name="TblBrands">
+          <Key>
+            <PropertyRef Name="BrandID" />
+          </Key>
+          <Property Name="BrandID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BrandImagePath" Type="nvarchar" MaxLength="100" />
+        </EntityType>
         <EntityType Name="TblCategory">
           <Key>
             <PropertyRef Name="CategoryID" />
@@ -32,6 +39,15 @@
           <Property Name="Subject" Type="int" />
           <Property Name="Message" Type="nvarchar" MaxLength="100" />
           <Property Name="Date" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Tblfooter">
+          <Key>
+            <PropertyRef Name="FooterID" />
+          </Key>
+          <Property Name="FooterID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FooterTel" Type="nvarchar" MaxLength="50" />
+          <Property Name="FooterMail" Type="nvarchar" MaxLength="100" />
+          <Property Name="FooterAdress" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="TblProfile">
           <Key>
@@ -108,8 +124,10 @@
         <Function Name="CountProjeTalebi" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="DbResumeModelStoreContainer">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblBrands" EntityType="Self.TblBrands" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblCategory" EntityType="Self.TblCategory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblContact" EntityType="Self.TblContact" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tblfooter" EntityType="Self.Tblfooter" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblProfile" EntityType="Self.TblProfile" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblProject" EntityType="Self.TblProject" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblService" EntityType="Self.TblService" Schema="dbo" store:Type="Tables" />
@@ -182,6 +200,8 @@
           <FunctionImport Name="CountProjeTalebi" ReturnType="Collection(Int32)" />
           <EntitySet Name="TblService" EntityType="DbResumeModel.TblService" />
           <EntitySet Name="TblTopic" EntityType="DbResumeModel.TblTopic" />
+          <EntitySet Name="TblBrands" EntityType="DbResumeModel.TblBrands" />
+          <EntitySet Name="Tblfooter" EntityType="DbResumeModel.Tblfooter" />
         </EntityContainer>
         <EntityType Name="TblContact">
           <Key>
@@ -242,6 +262,22 @@
           <Property Name="topictitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="topicDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="topicIcon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TblBrands">
+          <Key>
+            <PropertyRef Name="BrandID" />
+          </Key>
+          <Property Name="BrandID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BrandImagePath" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Tblfooter">
+          <Key>
+            <PropertyRef Name="FooterID" />
+          </Key>
+          <Property Name="FooterID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FooterTel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FooterMail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="FooterAdress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -344,6 +380,24 @@
                 <ScalarProperty Name="topicDescription" ColumnName="topicDescription" />
                 <ScalarProperty Name="topictitle" ColumnName="topictitle" />
                 <ScalarProperty Name="topicID" ColumnName="topicID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblBrands">
+            <EntityTypeMapping TypeName="DbResumeModel.TblBrands">
+              <MappingFragment StoreEntitySet="TblBrands">
+                <ScalarProperty Name="BrandImagePath" ColumnName="BrandImagePath" />
+                <ScalarProperty Name="BrandID" ColumnName="BrandID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tblfooter">
+            <EntityTypeMapping TypeName="DbResumeModel.Tblfooter">
+              <MappingFragment StoreEntitySet="Tblfooter">
+                <ScalarProperty Name="FooterAdress" ColumnName="FooterAdress" />
+                <ScalarProperty Name="FooterMail" ColumnName="FooterMail" />
+                <ScalarProperty Name="FooterTel" ColumnName="FooterTel" />
+                <ScalarProperty Name="FooterID" ColumnName="FooterID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

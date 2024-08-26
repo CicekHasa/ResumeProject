@@ -1,0 +1,22 @@
+﻿@using ResumeProject.Models
+@model  Tblfooter
+@{
+    ViewBag.Title = "UpdateFooterInfo";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Update Footer Info Page</h2>
+<form method="post">
+    @Html.HiddenFor(x => x.FooterID) @*id arka planda olsun ama ekranda gözükmesin!*@
+    <label>Footer Tel</label>
+    @Html.TextBoxFor(x => x.FooterTel, new { @class = "form-control" })
+    <br />
+    <label>Footer Mail</label>
+    @Html.TextBoxFor(x => x.FooterMail, new { @class = "form-control" })
+    <br />
+    <label>Footer Adress</label>
+    @Html.TextBoxFor(x => x.FooterAdress, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-primary">Kaydet</button>
+</form>

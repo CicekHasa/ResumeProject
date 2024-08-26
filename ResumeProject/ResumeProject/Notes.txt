@@ -52,3 +52,6 @@ Genelde köşeli parantez ile ifade edilir.
 -Math.Round(): Bu method küsüratlı bir değeri tam sayıya çevirip döndürür.
 -GetValueOrDefault() Bu method bir değer nullable(null izin vermiyorsa!) ise o değer null gelme durumunda default 0 gelmesi için bu method kullanılmalı.
 -Url.Content(): bu method bir image'e ~(tilda) ile yol verdiğimiz gibi aynı şekilde image lere yol vermemizi sağlar.
+-OrderByDescending(); EF'in bir methodudur. Tablodaki son kayıttan başlayarak gelmesini sağlar.
+-FirstOrDefault():EF'in bir methodudur. Tablodaki tek bir veri gelmesini sağlar.
+-Örnek Kullanım: db.table.OrderByDescending(f => f.id).FirstOrDefault();
