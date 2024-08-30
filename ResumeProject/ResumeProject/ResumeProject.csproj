@@ -483,6 +483,10 @@
     <Content Include="Views\Footer\Index1.cshtml" />
     <Content Include="Views\Footer\AddFooterInfo.cshtml" />
     <Content Include="Views\Footer\UpdateFooterInfo.cshtml" />
+    <Content Include="Views\Contact\SendMessage.cshtml" />
+    <Content Include="Views\Shared\_DefaultLayout.cshtml" />
+    <Content Include="Views\Contact\PartialMap.cshtml" />
+    <Content Include="Views\Contact\PartialContact.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

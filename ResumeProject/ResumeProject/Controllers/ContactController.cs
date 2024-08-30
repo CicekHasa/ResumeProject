@@ -29,5 +29,40 @@ namespace ResumeProject.Controllers
             return View(value);
         }
 
+        [HttpGet]
+        public ActionResult SendMessage()
+        {
+            //Category tablosundaki CategoryName'i dropdown'a atama 
+            List<SelectListItem> values = (from x in db.TblCategory.ToList()//tblcategory deki bilgileri x'e ata.
+                                           select new SelectListItem
+                                           {
+                                               Text = x.CategoryName, //Dropdown içindeki text yani kişiye gözükücek yazı x den gelen category name
+                                               Value = x.CategoryID.ToString() //Seçilen category name in id değerini de value ye ata.
+                                           }).ToList();
+
+            ViewBag.v = values;//values'e atadığım değerleri v değişkenine yolladım.
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult SendMessage(TblContact p)
+        {
+            //p.Date=DateTime.Now;//Bu da olur.
+            p.Date = DateTime.Parse(DateTime.Now.ToShortDateString());//Bugünün kısa tarihini verir.
+            db.TblContact.Add(p);
+            db.SaveChanges();
+            return RedirectToAction("Index","Default");//2. parametre hangi controller'a gitmek istediğini belirtir.
+        }
+
+        public PartialViewResult PartialMap()
+        {
+            return PartialView();
+        }
+
+        public PartialViewResult PartialContact()
+        {
+            return PartialView();
+        }
+
     }
 }

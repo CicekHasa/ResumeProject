@@ -1,0 +1,41 @@
+﻿@model ResumeProject.Models.TblContact
+
+@{
+    Layout = "~/Views/Shared/_DefaultLayout.cshtml"; /*Oluşturduğum layoutu elle ekliyorum buraya*/
+}
+
+@*Default controller içerisindeki index sayfasında partiallara böldüğümüz yapıyı ContactController içersindeki view'e taşıyacağız.
+Ancak oluşturulan partiallar Default controller da oluşturulduğundan dolayı çalışmayacak. Html'in Action methodunun overload'ında 2.parametrede partial'ın hangi controllerdan
+geldiğini seçebiliyoruz bu da bize partial'ı bu controllerda da kullanabilmemizi sağlıyor.*@
+
+@Html.Action("PartialContact")
+    <!-- //contact banner -->
+    <!-- contact -->
+    <section class="w3l-contacts-12">
+        <div class="contact-top pt-5">
+            <div class="container py-lg-5 py-2">
+                <div class="title-heading-w3 mx-auto text-center mb-sm-5 mb-4">
+                    <h3 class="w3l-title-main">Panelden Bana Mesaj Atabilirsiniz</h3>
+                </div>
+                <div class="d-grid cont-main-top">
+                    <!-- contact form -->
+                    <div class="contacts12-main">
+                        <form method="post" class="main-input">
+                            <div class="top-inputs d-grid">
+                                <input type="text" placeholder="Adınız Soyadınız" name="NameSurname" id="w3lName" required="">
+                                <input type="email" name="Mail" placeholder="Email Adresiniz" id="w3lSender" required="">
+                            </div>
+                            @Html.DropDownListFor(x=> x.Subject, (List<SelectListItem>)ViewBag.v, new {@class="form-control"}) @*Dropdown list'i controllerdaki get methodundaki ViewBag.v değerini çağırarak dolduruyoruz ve bu değerleri x.Subject'e  atıyoruz.*@
+                            <textarea placeholder="Message" name="Message" id="w3lMessage" required=""></textarea>
+                            <div class="text-end">
+                                <button type="submit" class="btn btn-primary btn-style">Mesajı Gönder</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- //contact form -->
+                </div>
+            </div>  
+            @Html.Action("PartialMap");
+        </div>
+    </section>
+

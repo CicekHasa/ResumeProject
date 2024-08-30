@@ -1,28 +1,15 @@
 ﻿
 @{
-    Layout = null;
+    Layout = "~/Views/Shared/_DefaultLayout.cshtml";
 }
-<!doctype html>
-<html lang="en">
 
-@Html.Action("PartialHeader")@*oluşturduğum partial'ı çağırmak için kullanılır.*@
 
-<body>
-    @Html.Action("PartialNavbar")
+
     @Html.Action("PartialFeature")
-    @Html.Action("PartialAbout")
+    @Html.Action("PartialAbout")@*oluşturduğum partial'ı çağırmak için kullanılır.*@
     @Html.Action("PartialService")
     @Html.Action("PartialTechnology")
-    @Html.Action("PartialTopic") 
+    @Html.Action("PartialTopic")
     @Html.Action("PartialCounter")
-    @Html.Action("PartialProjects") 
+    @Html.Action("PartialProjects")
     @Html.Action("PartialBrands")   @*Db de tablo oluşturulup dinamik yapıldı kodda ancak admin panelinde crud yapmak için sayfa oluşturulmadı!*@
-    @Html.Action("PartialFooter")   
-    <button onclick="topFunction()" id="movetop" title="Go to top">
-        <span class="fas fa-level-up-alt" aria-hidden="true"></span>
-    </button>
-    @Html.Action("PartialScript")
-
-</body>
-
-</html>

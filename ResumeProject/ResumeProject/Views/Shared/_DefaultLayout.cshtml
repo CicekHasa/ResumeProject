@@ -1,0 +1,30 @@
+﻿
+@{
+    Layout = null;
+}
+
+@*Default controller içerisindeki index sayfasında partiallara böldüğümüz yapıyı ContactController içersindeki view'e taşıyacağız.
+    Ancak oluşturulan partiallar Default controller da oluşturulduğundan dolayı çalışmayacak. Html'in Action methodunun overload'ında 2.parametrede partial'ın hangi controllerdan
+    geldiğini seçebiliyoruz bu da bize partial'ı bu controllerda da kullanabilmemizi sağlıyor.*@
+
+<!doctype html>
+<html lang="en">
+
+@Html.Action("PartialHeader", "Default")
+
+<body>
+    @Html.Action("PartialNavbar", "Default")
+
+
+    @RenderBody()
+
+
+    @Html.Action("PartialFooter", "Default")
+    <button onclick="topFunction()" id="movetop" title="Go to top">
+        <span class="fas fa-level-up-alt" aria-hidden="true"></span>
+    </button>
+    @Html.Action("PartialScript", "Default")
+
+</body>
+
+</html>
