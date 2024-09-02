@@ -1,0 +1,32 @@
+﻿@using ResumeProject.Models
+@model List<TblSolution>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Çözüm Listesi</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Çözüm Adı</th>
+        <th>Çözüm Resim yolu</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.SolutionID</td>
+            <td>@item.SolutionName</td>
+            <td>@item.ImageUrl</td>
+            <td><a href="/Solution/DeleteSolution/@item.SolutionID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Solution/UpdateSolution/@item.SolutionID" class="btn btn-primary">Güncelle</a></td>
+        </tr>
+    }
+</table>
+
+<a href="/Solution/AddSolution" class="btn btn-success">Yeni Çözüm Ekle</a>
+

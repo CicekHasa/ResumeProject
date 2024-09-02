@@ -101,6 +101,14 @@
           <Property Name="SkillDescription" Type="nvarchar" MaxLength="250" />
           <Property Name="SkillIcon" Type="nvarchar" MaxLength="50" />
         </EntityType>
+        <EntityType Name="TblSolution">
+          <Key>
+            <PropertyRef Name="SolutionID" />
+          </Key>
+          <Property Name="SolutionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SolutionName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ImageUrl" Type="nvarchar" MaxLength="100" />
+        </EntityType>
         <EntityType Name="TblTechnology">
           <Key>
             <PropertyRef Name="TechnologyID" />
@@ -142,6 +150,7 @@
           <EntitySet Name="TblReferences" EntityType="Self.TblReferences" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblService" EntityType="Self.TblService" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblSkill" EntityType="Self.TblSkill" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblSolution" EntityType="Self.TblSolution" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblTechnology" EntityType="Self.TblTechnology" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblTopic" EntityType="Self.TblTopic" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_TblContact_TblCategory" Association="Self.FK_TblContact_TblCategory">
@@ -213,6 +222,7 @@
           <EntitySet Name="TblBrands" EntityType="DbResumeModel.TblBrands" />
           <EntitySet Name="Tblfooter" EntityType="DbResumeModel.Tblfooter" />
           <EntitySet Name="TblReferences" EntityType="DbResumeModel.TblReferences" />
+          <EntitySet Name="TblSolution" EntityType="DbResumeModel.TblSolution" />
         </EntityContainer>
         <EntityType Name="TblContact">
           <Key>
@@ -298,6 +308,14 @@
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Job" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TblSolution">
+          <Key>
+            <PropertyRef Name="SolutionID" />
+          </Key>
+          <Property Name="SolutionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SolutionName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ImageUrl" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -428,6 +446,15 @@
                 <ScalarProperty Name="Job" ColumnName="Job" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="ReferenceId" ColumnName="ReferenceId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblSolution">
+            <EntityTypeMapping TypeName="DbResumeModel.TblSolution">
+              <MappingFragment StoreEntitySet="TblSolution">
+                <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+                <ScalarProperty Name="SolutionName" ColumnName="SolutionName" />
+                <ScalarProperty Name="SolutionID" ColumnName="SolutionID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
