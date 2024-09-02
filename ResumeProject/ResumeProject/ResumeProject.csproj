@@ -128,6 +128,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
@@ -135,6 +136,8 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\ProjectController.cs" />
+    <Compile Include="Controllers\ReferenceController.cs" />
+    <Compile Include="Controllers\ServicesController.cs" />
     <Compile Include="Controllers\SkillController.cs" />
     <Compile Include="Controllers\StatisticController.cs" />
     <Compile Include="Controllers\TechnologyController.cs" />
@@ -176,6 +179,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TblProject.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TblReferences.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TblService.cs">
@@ -487,6 +493,19 @@
     <Content Include="Views\Shared\_DefaultLayout.cshtml" />
     <Content Include="Views\Contact\PartialMap.cshtml" />
     <Content Include="Views\Contact\PartialContact.cshtml" />
+    <Content Include="Views\Reference\Index.cshtml" />
+    <Content Include="Views\Reference\UpdateReference.cshtml" />
+    <Content Include="Views\Reference\AddReference.cshtml" />
+    <Content Include="Views\About\Index.cshtml" />
+    <Content Include="Views\About\PartialAbout.cshtml" />
+    <Content Include="Views\About\PartialSkills.cshtml" />
+    <Content Include="Views\About\PartialPageVideo.cshtml" />
+    <Content Include="Views\About\PartialContact.cshtml" />
+    <Content Include="Views\About\PartialReference.cshtml" />
+    <Content Include="Views\About\PartialScript.cshtml" />
+    <Content Include="Views\Services\Index.cshtml" />
+    <Content Include="Views\Services\UpdateService.cshtml" />
+    <Content Include="Views\Services\AddService.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

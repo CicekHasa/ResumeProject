@@ -1,0 +1,24 @@
+﻿@using ResumeProject.Models
+@model TblReferences
+@{
+    ViewBag.Title = "UpdateReference";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Referans Bilgileri Güncelleme Sayfası</h2>
+
+<form method="post">
+    @Html.HiddenFor(x=>x.ReferenceId)
+    <label>Referans Adı</label>
+    @Html.TextBoxFor(x=>x.Name, new {@class="form-control"})
+    <br />
+    <label>Referans Mesleği</label>
+    @Html.TextBoxFor(x=>x.Job, new {@class="form-control"})
+    <br />
+    <label>Referans Açıklaması</label>
+    @Html.TextBoxFor(x=>x.Description, new {@class="form-control"})
+    <br />
+
+    <button class="btn btn-primary">Kaydet</button>
+</form>
+

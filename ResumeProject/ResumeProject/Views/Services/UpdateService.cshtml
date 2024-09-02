@@ -1,0 +1,24 @@
+﻿@using ResumeProject.Models
+@model TblService
+
+@{
+    ViewBag.Title = "UpdateService";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Hizmet Güncelleme Sayfası</h2>
+
+<form method="post">
+    @Html.HiddenFor(x => x.ServiceID)
+    <label>Hizmet Başlığı</label>
+    @Html.TextBoxFor(x => x.ServiceTitle, new { @class = "form-control" })
+    <br />
+    <label>Hizmet Açıklaması</label>
+    @Html.TextBoxFor(x => x.ServiceDescription, new { @class = "form-control" })
+    <br />
+    <label>Hizmet İcon </label>
+    @Html.TextBoxFor(x => x.ServiceIcon, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-outline-info">Kaydet</button>
+</form>
+

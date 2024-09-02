@@ -38,6 +38,7 @@ namespace ResumeProject.Models
         public virtual DbSet<TblTopic> TblTopic { get; set; }
         public virtual DbSet<TblBrands> TblBrands { get; set; }
         public virtual DbSet<Tblfooter> Tblfooter { get; set; }
+        public virtual DbSet<TblReferences> TblReferences { get; set; }
     
         public virtual ObjectResult<Nullable<int>> CountProjeTalebi()
         {

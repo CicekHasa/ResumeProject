@@ -1,0 +1,34 @@
+﻿@using ResumeProject.Models
+@model List<TblService>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Hizmetler Listesi Sayfası</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Hizmet Başlığı</th>
+        <th>Hizmet Açıklaması</th>
+        <th>Hizmet İkon Yolu</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ServiceID</td>
+            <td>@item.ServiceTitle</td>
+            <td>@item.ServiceDescription</td>
+            <td>@item.ServiceIcon</td>
+            <td><a href="/Services/DeleteService/@item.ServiceID" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="/Services/UpdateService/@item.ServiceID" class="btn btn-outline-primary">Güncelle</a></td>
+        </tr>
+    }
+
+</table>
+
+<a href="/Services/AddService" class="btn btn-outline-success">Yeni Hizmet Ekle</a>
